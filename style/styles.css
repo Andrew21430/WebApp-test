@@ -1,0 +1,199 @@
+body {
+    background-color: #0D664D;
+}
+p {
+    /* 
+    border: 2px solid rgb(156, 0, 81);
+    background-color: rgb(156, 0, 81);
+    margin: 50px;
+    padding: 10px; 
+    */
+    color:rgb(255, 255, 255);
+}
+header {
+    color: rgb(236, 226, 226);
+    font-family:'Courier New';
+}
+h1{
+  color: rgb(236, 226, 226);
+  font-family:'Courier New';
+}
+img {
+    width:100%;
+    border-radius: 0.5rem;
+    height: auto;
+    display: block;
+}
+
+
+
+  
+  /* Change the link color on hover */
+  li a:hover {
+    background-color: rgb(156, 0, 81);
+    color: rgb(200,200,200);
+  }
+
+  nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(67, 26, 70);
+    top: 0;
+    width: 100%;
+  }
+  
+  nav ul li{
+    float: left;
+    font-size: 1rem;
+  }
+  
+  nav li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  nav li:hover{
+    background-color: rgb(156, 0, 81);
+  }
+  
+  nav #active{
+    background-color: rgb(117, 0, 83);
+  }
+
+
+
+.grid{
+  display: grid;
+  gap: 1.5rem;
+  grid-template-areas:
+   'one'
+   'two'
+   'three'
+   'four';
+
+  padding-block: 2rem;
+  border-radius: 0.5rem;
+  background-color: #7AB0A1;
+}
+
+.grid:nth-child(1) {
+  grid-area: one;
+}
+.grid:nth-child(2) {
+  grid-area: two;
+}
+.grid:nth-child(3) {
+  grid-area: three;
+}
+.grid:nth-child(4) {
+  grid-area: four;
+}
+
+.grid-col-span2{
+  grid-column: span 2;
+}
+.grid3col{
+  display:grid;
+  gap: 1.5rem;
+  grid-template-areas: 
+  'one'
+  'two'
+  'three';
+  padding-block: 2rem;
+  border-radius: 0.5rem;
+  background-color: #2EA282;
+}
+
+.grid3col:nth-child(1){
+  grid-area: one;
+}
+.grid3col:nth-child(2){
+  grid-area: two;
+}
+.grid3col:nth-child(3){
+  grid-area: three;
+}
+
+.gridaction{  
+  display:grid;
+  gap: 1.5rem;
+  grid-template-areas: 
+  'one'
+  'two'
+  'three';
+  padding-block: 2rem;
+  border-radius: 0.5rem;
+  background-color: #256F5B;
+
+}
+
+.gridaction:nth-child(1){
+  grid-area: one;
+}
+.gridaction:nth-child(2){
+  grid-area: two;
+}
+
+
+@media screen and (min-width: 50em){
+  .grid{
+    grid-template-areas:
+    'one two'
+    'three four'
+    ;
+  }
+  .grid3col{
+    grid-template-areas: 
+    'one two three';
+  }
+  .gridaction{
+    grid-template-areas: 
+    'one two';
+  }
+  
+}
+
+@media screen and (max-width: 40em){
+  .grid{
+    grid-template-areas:
+    'one one two '
+    'five five four'
+    'three three four'
+    ;
+  }
+  
+}
+
+
+
+@media screen and (max-width: 30em){
+  .grid{
+    grid-template-areas:
+    'one one'
+    'three four'
+    'five four'
+    'five two'
+    ;
+  }
+  
+}
+
+
+
+@media screen and (max-width: 20em){
+  .grid{
+    grid-template-areas:
+    'one four'
+    'one four'
+    'two four'
+    'three five'
+    'three five'
+    ;
+  }
+  
+}
